@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><title>Annotation Studio</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+  <h1>Annotation Studio</h1>
+  <nav>
+    <button id="tab-text" class="tab active">Text</button>
+    <button id="tab-image" class="tab">Images</button>
+  </nav>
+  <div class="spacer"></div>
+  <label class="btn">Upload <input id="file" type="file" multiple hidden accept=".txt,.jsonl,.csv,image/*"></label>
+  <a class="btn" href="/api/export?format=json">JSON</a>
+  <a class="btn" href="/api/export?format=csv">CSV</a>
+  <a class="btn" href="/api/export?format=coco">COCO</a>
+</header>
+<main>
+  <aside>
+    <div id="progress"></div>
+    <ul id="list"></ul>
+  </aside>
+  <section id="panel"></section>
+</main>
+<footer>Keys: <b>1-9</b> pick label · <b>N</b>/<b>P</b> next/prev · <b>Enter</b> mark done · <b>Del</b> undo last annotation</footer>
+<script src="/static/app.js"></script>
+</body>
+</html>

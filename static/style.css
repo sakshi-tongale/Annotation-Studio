@@ -1,0 +1,30 @@
+:root{--bg:#f6f7f9;--fg:#1c2330;--card:#fff;--accent:#3b6ef5;--line:#dfe3ea;--ok:#1f9d55}
+@media(prefers-color-scheme:dark){:root{--bg:#14171d;--fg:#e6e9ef;--card:#1d222b;--line:#2c333f}}
+*{box-sizing:border-box}
+body{margin:0;font:15px system-ui,sans-serif;background:var(--bg);color:var(--fg);display:flex;flex-direction:column;height:100vh}
+header{display:flex;gap:8px;align-items:center;padding:10px 16px;background:var(--card);border-bottom:1px solid var(--line)}
+h1{font-size:17px;margin:0 16px 0 0}.spacer{flex:1}
+.btn,.tab,.lbl{border:1px solid var(--line);background:var(--card);color:var(--fg);padding:6px 12px;border-radius:6px;cursor:pointer;text-decoration:none;font:inherit}
+.tab.active,.lbl.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+main{flex:1;display:flex;min-height:0}
+aside{width:290px;border-right:1px solid var(--line);display:flex;flex-direction:column;background:var(--card)}
+#progress{padding:10px 12px;font-size:13px;border-bottom:1px solid var(--line)}
+#list{list-style:none;margin:0;padding:0;overflow:auto;flex:1}
+#list li{padding:9px 12px;border-bottom:1px solid var(--line);cursor:pointer;font-size:13px;display:flex;gap:6px;align-items:center}
+#list li.sel{background:color-mix(in srgb,var(--accent) 15%,transparent)}
+#list li .t{flex:1;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+#list li.done::after{content:"✓";color:var(--ok);font-weight:700}
+#panel{flex:1;padding:20px;overflow:auto}
+.row{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 16px;align-items:center}
+h3{margin:14px 0 4px;font-size:13px;text-transform:uppercase;letter-spacing:.05em;opacity:.7}
+#txt{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;font-size:18px;line-height:2.1;user-select:text}
+mark{padding:2px 4px;border-radius:4px;color:#111;cursor:pointer}
+mark small{font-size:10px;font-weight:700;margin-left:4px;opacity:.75}
+.wrap{position:relative;display:inline-block;max-width:100%;line-height:0}
+.wrap img{max-width:100%;max-height:70vh;display:block}
+.wrap canvas{position:absolute;inset:0;cursor:crosshair}
+.chip{display:inline-flex;gap:6px;border:1px solid var(--line);border-radius:12px;padding:2px 10px;margin:2px;background:var(--card);font-size:13px}
+.chip b{cursor:pointer;color:#c0392b}
+.empty{opacity:.6;padding:40px;text-align:center}
+.done-btn{background:var(--ok);color:#fff;border:0;padding:8px 18px;border-radius:6px;cursor:pointer;font:inherit}
+footer{padding:6px 16px;font-size:12px;opacity:.7;border-top:1px solid var(--line);background:var(--card)}
